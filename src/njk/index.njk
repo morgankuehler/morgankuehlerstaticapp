@@ -1,25 +1,17 @@
 {% extends '_layouts/base.njk' %}
 
-{% block page_title %}New index page title{% endblock %}
+{% block page_title %}The Ship's Log{% endblock %}
 
 {% block content %}
 
 <div class="container">
   <div class="row">
     <div class="col">
-    <h1>Main headline</h1>
-    <p class="author">By {% for author in authors %}
-      <a href="{{ author.link }}" target="_blank">{{ author.name }}</a>{% if not loop.last %}{% if loop.revindex0 == 1 %} and {% else %}, {% endif %}{% endif %} {% endfor %}
-      <br> Published {{ publish_date }}
-    </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p>
-        Lucas ipsum dolor <a href="detail-page.html">link to detail-page.html</a> amidala sith dooku solo moff organa obi-wan windu. Gamorrean binks wedge darth. Mon darth mon kit ponda solo. Moff watto ackbar mothma moff anakin. Lando skywalker lars fett calrissian lars organa. Organa kenobi wedge darth jawa skywalker anakin. Twi'lek kit darth calamari lando kamino droid. Darth jawa fett grievous maul. Palpatine obi-wan leia tusken raider dagobah. Twi'lek qui-gon boba antilles yoda thrawn. Wampa luuke wampa skywalker. Moff ponda ackbar dagobah kit lobot jinn solo.
-      </p>
-        {% for entry in entries %}
+      <h1> Very real and very believeable true stories from pirates. </h1>
+        <p>
+          Captian Sham requests that you take a look at  <a href="2018-10-18.njk"> these very authentic and very believable diary entries</a> because they were published online and that makes them true. Believe me. You can believe Captian Sham.
+        </p>
+        {% for entry in data.entries %}
           <h3 class="entry-headline"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
           <p class="entry-date">{{ entry.date }}</p>
           <hr>
